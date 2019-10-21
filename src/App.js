@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Review from './component/review';
 
 function App() {
   return (
@@ -14,13 +15,13 @@ function App() {
       <main>
         <div className="moviefull">
           <div className="summary"></div>
-          <div className="review"></div>
+          <Review/>
         </div>
         
       </main>
 
       <footer>
-<h6>Made with ♥ at Codaisseur</h6>
+          <h6>Made with ♥ at Codaisseur</h6>
 
       </footer>
     </div>
