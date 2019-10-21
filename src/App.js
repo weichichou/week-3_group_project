@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Review from './component/review';
+import Review from './component/Review';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <main>
         <div className="moviefull">
           <div className="summary"></div>
-          <Review/>
+          <Review score={8.5} reviewTexts='text'/>
         </div>
         
       </main>
