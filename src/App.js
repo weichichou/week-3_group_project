@@ -12,7 +12,11 @@ function App() {
       </header>
 
       <main>
-
+        <div className="moviefull">
+          <div className="summary"></div>
+          <div className="review"></div>
+        </div>
+        
       </main>
 
       <footer>
