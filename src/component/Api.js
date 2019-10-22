@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Summary from "./Summary"
+import Review from "./Review"
 
 export default class api extends Component {
     state={
@@ -24,7 +25,9 @@ export default class api extends Component {
             <div>
                 
                 {this.state.movies.map(movie => {
-                    return (<Summary
+                    return (
+                    <div>                  
+                    <Summary
                     imagecontent={movie.image}
                     desc = {movie.desc}
                     title = {movie.title}
@@ -32,7 +35,10 @@ export default class api extends Component {
                     stars= {movie.stars}
                     
                     />
+                    <Review score = {movie.userscore}/>
+                    </div>
                     )
+                    
                 })}
                 
             </div>
