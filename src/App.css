@@ -27,3 +27,47 @@
 footer {
   text-align: center;
 }
+
+.movieTitle {
+  font-weight: bold;
+  text-align: center;
+}
+
+.moviePanel{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height:300px;
+  width:600px;
+  border:1px black solid;
+  margin:auto;
+}
+
+.contentPanel{
+  height: 300px;
+  width: 600px;
+  border:black 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 10px;
+  background: goldenrod;
+}
+.imageClass{
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  
+}
+
+.description{
+  color:maroon;
+}
+
+.stars{
+
+}
+
+.director{
+
+}
