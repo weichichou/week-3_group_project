@@ -56,9 +56,9 @@ export default class api extends Component {
                         title = {movie.title}
                         director = {movie.director}
                         stars= {movie.stars}
-                        
+                        score = {movie.userscore}
                         />
-                        <Review score = {movie.userscore}/>
+                        <Review />
                         </div>
                         )
                         
@@ -83,7 +83,7 @@ export default class api extends Component {
                         stars= {movie.stars}
                         
                         />
-                        <Review score = {movie.userscore}/>
+                        <Review />
                         </div>
                         )
                         
