@@ -1,6 +1,6 @@
 import React , { Component } from "react";
 import Api from "./Api"
-export default class  extends Component{
+export default class Summary extends Component{
 
     
     render(){
