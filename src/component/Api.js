@@ -59,9 +59,9 @@ export default class api extends Component {
                 <div>
                     <AppNavBar searchByGenre={this.searchByGenre} />
                     {this.state.movies
-                        //.sort()here. sort by numLikes
+                        .map(movie => ({...movie, likes: this.state.likes[movie.title]}))
+                        .sort((a,b)=>b.likes - a .likes)
                         .map(movie => {
-                        //sort() after map? add a numLikes property to this new mapped array
                         return (
                         <div> 
                                          
@@ -87,7 +87,8 @@ export default class api extends Component {
                 <div>
                     <AppNavBar searchByGenre={this.searchByGenre} />
                     {this.state.searchByGenreMovies
-                        //.sort()here. sort by numLikes
+                        .map(movie => ({...movie, likes: this.state.likes[movie.title]}))
+                        .sort((a,b)=>b.likes - a .likes)
                         .map(movie => {
                         return (
                         <div> 
