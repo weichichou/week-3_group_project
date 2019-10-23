@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
-import Review from './component/Review';
+import $ from 'jquery';
+import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Api from './component/Api'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -12,10 +15,12 @@ function App() {
         <h1>
           Fresh Tomatoes
         </h1>
+        
       </header>
-
+      
       <main>
         <div className="moviefull">
+
 
           <div className="summary"></div>
           
