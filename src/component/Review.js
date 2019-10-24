@@ -6,13 +6,18 @@ import Comment from "./Comment"
 import Upvote from "./Upvote"
 
 export default class Review extends Component {
-  
+   state={
+    title: this.props.title
+   }
     
 
     render (){
         return (
             <div>
-                <Upvote />
+                <Upvote 
+                    title={this.props.title}
+                    incrementLike={this.props.incrementLike}
+                    likes={this.props.likes} />
                 <Comment />
                 
             </div>
