@@ -37,8 +37,14 @@ footer {
 	text-align: center;
 }
 
+.newmoviePanel {
+	height: 300px;
+	width: 300px;
+	border: 1px black solid;
+	margin: auto;
+}
 .moviePanel {
-	display: flex;
+	display:flex;
 	align-items: center;
 	justify-content: flex-start;
 	height: 300px;
@@ -46,7 +52,6 @@ footer {
 	border: 1px black solid;
 	margin: auto;
 }
-
 .contentPanel {
 	height: 300px;
 	width: 600px;
@@ -57,8 +62,13 @@ footer {
 	padding-left: 10px;
 	background: goldenrod;
 }
-.imageClass {
-	width: 200px;
+.newimageClass {
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+}
+.imageClass{
+    width: 200px;
 	height: 300px;
 	border: 1px solid black;
 }

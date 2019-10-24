@@ -1,7 +1,10 @@
 import React , { Component } from "react";
-import Api from "./Api"
+import {Link} from "react-router-dom"
+import DetailPage from './DetailPage';
 export default class Summary extends Component{
-
+  state={
+      
+  }
     
     render(){
         return  <div className="summaryClass">
@@ -10,10 +13,11 @@ export default class Summary extends Component{
                         <div className="movieTitle ">{this.props.title}</div>
                     </h2>
                     
-                    <div className="moviePanel">
-                        <img className="imageClass" src={this.props.imagecontent} alt="" style={this.props.specialstyle}/>
+                    <div className="newmoviePanel">
+                        <Link to={`/detailPage/${this.props.title}`}><img className="newimageClass" src={this.props.imagecontent} alt="" style={this.props.specialstyle}/></Link>
+                        
 
-                        <div className="contentPanel">
+                        {/* <div className="contentPanel">
                             <div className="description">
                             <strong>Synopsis:</strong> {this.props.desc}
                             </div>
@@ -26,8 +30,8 @@ export default class Summary extends Component{
                             <div className="score">
                             <strong>Score: </strong>{this.props.score}
                             </div>
-                        </div>
-        
+                        </div> */}
+                        
                         
                     </div>
                     

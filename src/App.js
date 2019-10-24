@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import $ from 'jquery';
-import Popper from 'popper.js';
+
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Api from './component/Api'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {  Route } from "react-router-dom";
+import DetailPage from "./component/DetailPage"
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
 
 
           <div className="summary"></div>
-          
-          <Api  />
+          <Route exact path="/" component={Api} />
+          <Route path="/detailPage/:title" component={DetailPage} />
           
         </div>
         
