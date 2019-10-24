@@ -23,6 +23,9 @@ export default class Summary extends Component{
                             <div className="director">
                             <strong>Director: </strong>{this.props.director}
                             </div>
+                            <div className="score">
+                            <strong>Score: </strong>{this.props.score}
+                            </div>
                         </div>
         
                         
