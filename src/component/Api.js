@@ -24,7 +24,7 @@ export default class api extends Component {
             .filter(movie => {
                 return (movie.genre === genre)
             });
-            console.log(searchList)
+
             this.setState({searchByGenreMovies:searchList,initialLoad:false})
         }else {
             this.setState({searchByGenreMovies:this.state.movies})
