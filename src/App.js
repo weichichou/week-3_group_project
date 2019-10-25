@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
        {/*  <img src={logo} className="App-logo" alt="logo" /> */}
         <h1>
-          Fresh Tomatoes
+          Movie Review Feed
         </h1>
         
       </header>

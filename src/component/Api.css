@@ -3,5 +3,5 @@
 	position: sticky !Important;
     top: 111px;
     background-color: black;
-    color: white;
+    color: white !Important;
 }
