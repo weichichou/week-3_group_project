@@ -23,7 +23,7 @@ function App() {
 
 
           <div className="summary"></div>
-          <Route exact path="/" component={Api} />
+          <Route exact path="/" component={Api} test="hi" />
           <Route path="/detailPage/:title" component={DetailPage} />
           
         </div>
