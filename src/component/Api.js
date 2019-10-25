@@ -4,7 +4,7 @@ import Summary from "./Summary";
 import Review from "./Review";
 import "./Api.css";
 
-export default class api extends Component {
+export default class Api extends Component {
 	state = {
 		initialLoad: true,
 		movies: [],
@@ -36,22 +36,19 @@ export default class api extends Component {
 		fetch("https://my-json-server.typicode.com/LavanyaJay/movieapi/movies")
 			.then(response => response.json()) // convert response to json
 
-			.then(data => {
-				console.log(data);
-				const likes = data.reduce((acc, val) => {
-					return { ...acc, [val.title]: 0 };
+			.then(movies => {
+				console.log(movies);
+				const likes = movies.reduce((acc, movie) => {
+					return { ...acc, [movie.title]: 0 };
 				}, {});
 				this.setState({
-					movies: data,
+					movies: movies,
 					likes: likes
 				});
-				// display data in the browser
 			});
 	}
 
 	render() {
-		console.log(this.state);
-
 		if (this.state.initialLoad) {
 			return (
 				<div>

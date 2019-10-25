@@ -7,23 +7,8 @@ export default class Comment extends Component {
 		totalComments: []
 	};
 
-	handleSubmit = event => {
-		event.preventDefault();
-		const comment = {
-			username: this.state.username,
-			usercomment: this.state.usercomment
-		};
-
-		const newComment = this.state.totalComments.concat(comment);
-
-		this.setState({ totalComments: newComment });
-		this.setState({
-			username: "",
-			usercomment: ""
-		});
-	};
-
 	componentDidMount() {
+		this._isMounted = true;
 		console.log("mounting");
 		const movie_Id = this.props.movieid;
 		console.log(`movieId: ${movie_Id}`);
@@ -37,15 +22,17 @@ export default class Comment extends Component {
 					totalComments: commentsData
 				});
 			});
-
-		/* .then(comments => this.setState({ totalComments: comments })); */
 	}
 
 	componentWillUnmount() {
 		this._isMounted = false;
+		document.removeEventListener("onChange", this.handleNameChange);
+		document.removeEventListener("onChange", this.handleCommentChange);
 	}
 
-	handleSubmit = () => {
+	handleSubmit = event => {
+		event.preventDefault();
+
 		const movieId = this.props.movieid;
 		const newComment = {
 			movieid: movieId,
@@ -65,6 +52,10 @@ export default class Comment extends Component {
 				const comments = [...this.state.totalComments, comment];
 				this.setState({ totalComments: comments });
 			});
+		this.setState({
+			username: "",
+			usercomment: ""
+		});
 	};
 
 	handleNameChange = event => {
