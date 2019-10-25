@@ -1,0 +1,40 @@
+{
+	"comments": [
+		{
+			"movieid": 1,
+			"id": 1,
+			"username": "A",
+			"usercomment": "Good"
+		},
+		{
+			"movieid": 1,
+			"id": 2,
+			"username": "B",
+			"usercomment": "Great"
+		},
+		{
+			"movieid": 2,
+			"username": "Lavanya",
+			"usercomment": "Enjoyed the movie",
+			"id": 3
+		},
+		{
+			"movieid": 2,
+			"username": "Wei",
+			"usercomment": "Super",
+			"id": 4
+		},
+		{
+			"movieid": 3,
+			"username": "Som",
+			"usercomment": "The best movie",
+			"id": 5
+		},
+		{
+			"movieid": 4,
+			"username": "A",
+			"usercomment": "Interesting",
+			"id": 6
+		}
+	]
+}
