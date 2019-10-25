@@ -1,23 +1,27 @@
-import React , { Component } from "react";
-import {Link} from "react-router-dom"
-import DetailPage from './DetailPage';
-export default class Summary extends Component{
-  state={
-      
-  }
-    
-    render(){
-        return  <div className="summaryClass">
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import DetailPage from "./DetailPage";
+export default class Summary extends Component {
+	state = {};
 
-                    <h2>
-                        <div className="movieTitle ">{this.props.title}</div>
-                    </h2>
-                    
-                    <div className="newmoviePanel">
-                        <Link to={`/detailPage/${this.props.title}`}><img className="newimageClass" src={this.props.imagecontent} alt="" style={this.props.specialstyle}/></Link>
-                        
+	render() {
+		return (
+			<div className="summaryClass">
+				<h2>
+					<div className="movieTitle ">{this.props.title}</div>
+				</h2>
 
-                        {/* <div className="contentPanel">
+				<div className="newmoviePanel">
+					<Link to={`/detailPage/${this.props.title}`}>
+						<img
+							className="newimageClass"
+							src={this.props.imagecontent}
+							alt=""
+							style={this.props.specialstyle}
+						/>
+					</Link>
+
+					{/* <div className="contentPanel">
                             <div className="description">
                             <strong>Synopsis:</strong> {this.props.desc}
                             </div>
@@ -31,14 +35,8 @@ export default class Summary extends Component{
                             <strong>Score: </strong>{this.props.score}
                             </div>
                         </div> */}
-                        
-                        
-                    </div>
-                    
-                  
-                </div>
-        
-        
-          
-    }
-};
+				</div>
+			</div>
+		);
+	}
+}

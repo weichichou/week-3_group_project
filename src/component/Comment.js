@@ -24,12 +24,14 @@ export default class Comment extends Component {
 	};
 
 	componentDidMount() {
-		const movieId = this.props.movieid;
+		console.log("mounting");
+		const movie_Id = this.props.movieid;
+		console.log(`movieId: ${movie_Id}`);
 		fetch("http://localhost:4000/comments")
 			.then(response => response.json())
 			.then(data => {
 				const commentsData = data.filter(comment => {
-					return comment.movieid === movieId;
+					return comment.movieid === movie_Id;
 				});
 				this.setState({
 					totalComments: commentsData
@@ -37,6 +39,10 @@ export default class Comment extends Component {
 			});
 
 		/* .then(comments => this.setState({ totalComments: comments })); */
+	}
+
+	componentWillUnmount() {
+		this._isMounted = false;
 	}
 
 	handleSubmit = () => {

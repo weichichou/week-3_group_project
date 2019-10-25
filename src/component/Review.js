@@ -11,6 +11,7 @@ export default class Review extends Component {
 	};
 
 	render() {
+		console.log(this.props.movieid);
 		return (
 			<div>
 				<Upvote

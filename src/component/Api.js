@@ -51,7 +51,7 @@ export default class api extends Component {
 
 	render() {
 		console.log(this.state);
-		console.log("this.props.test", this.props.test);
+
 		if (this.state.initialLoad) {
 			return (
 				<div>

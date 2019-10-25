@@ -43,8 +43,18 @@ export default class AppNavBar extends Component {
 					</Nav.Link>
 				</Nav.Item>
 				<Nav.Item>
+					<Nav.Link onClick={() => this.props.searchByGenre("Romance")}>
+						Romance
+					</Nav.Link>
+				</Nav.Item>
+				<Nav.Item>
 					<Nav.Link onClick={() => this.props.searchByGenre("Drama")}>
 						Drama
+					</Nav.Link>
+				</Nav.Item>
+				<Nav.Item>
+					<Nav.Link onClick={() => this.props.searchByGenre("Horror")}>
+						Horror
 					</Nav.Link>
 				</Nav.Item>
 			</Nav>
