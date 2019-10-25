@@ -58,6 +58,7 @@ export default class DetailPage extends Component {
 					</div>
 				</div>
 				
+				
 			    
 			</div>
 		);

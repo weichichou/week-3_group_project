@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import AppNavBar from '../component/AppNavBar';
-import Summary from "./Summary"
-import Review from "./Review"
+import Summary from "./Summary";
+import Review from "./Review";
+import './Api.css';
 
 export default class api extends Component {
     state={
@@ -53,11 +54,15 @@ export default class api extends Component {
 
     render() {
         console.log(this.state)
+        console.log("this.props.test", this.props.test)
         if (this.state.initialLoad){
             
             return (
                 <div>
+                  <div className='navbar'>
                     <AppNavBar searchByGenre={this.searchByGenre} />
+                  </div>
+                  
                     {this.state.movies
                         .map(movie => ({...movie, likes: this.state.likes[movie.title]}))
                         .sort((a,b)=>b.likes - a .likes)
@@ -85,7 +90,9 @@ export default class api extends Component {
 
             return (
                 <div>
+                  <div className='navbar'>
                     <AppNavBar searchByGenre={this.searchByGenre} />
+                  </div>
                     {this.state.searchByGenreMovies
                         .map(movie => ({...movie, likes: this.state.likes[movie.title]}))
                         .sort((a,b)=>b.likes - a .likes)

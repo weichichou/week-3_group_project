@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
        {/*  <img src={logo} className="App-logo" alt="logo" /> */}
         <h1>
-          Fresh Tomatoes
+          Movie Review Feed
         </h1>
         
       </header>
@@ -23,7 +23,7 @@ function App() {
 
 
           <div className="summary"></div>
-          <Route exact path="/" component={Api} />
+          <Route exact path="/" component={Api} test="hi" />
           <Route path="/detailPage/:title" component={DetailPage} />
           
         </div>

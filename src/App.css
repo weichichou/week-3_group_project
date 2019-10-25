@@ -14,18 +14,22 @@ body {
 }
 
 .App-header {
-	background-color: goldenrod;
+	background-color:black;
 	min-height: 20vh;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
-	color: maroon;
+	color: white;
+	position: -webkit-sticky;
+	position: sticky !Important;
+	top: -1px;
+
 }
 
 .App-link {
-	color: #09d3ac;
+	color: black;;
 }
 
 footer {
@@ -83,8 +87,8 @@ footer {
 	display: flex;
 	margin: auto;
 	border: 1px solid black;
-	background: rgb(241, 220, 179);
-	color: navy;
+	background: lightgrey;
+	color: black;
 }
 .commentClass {
 	height: 200px;
@@ -93,7 +97,7 @@ footer {
 	flex-direction: column;
 	align-items: flex-start;
 
-	border: 1px green solid;
+	border: 1px black;
 	padding-top: 0;
 
 	padding-left: 10px;
@@ -106,7 +110,8 @@ footer {
 
 .displayComment {
 	font-size: 12px;
-	color: navy;
+	color: black;
+	background-color: lightgrey;
 }
 
 .commentBtn {
