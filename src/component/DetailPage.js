@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Review from './Review';
+import Review from "./Review";
 export default class DetailPage extends Component {
 	state = {
 		movie: {}
@@ -57,9 +57,6 @@ export default class DetailPage extends Component {
 						</div>
 					</div>
 				</div>
-				
-				
-			    
 			</div>
 		);
 	}
